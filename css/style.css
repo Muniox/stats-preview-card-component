@@ -1,8 +1,64 @@
+/* color variables*/
+/******************/
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  height: 100%;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+}
+
+.card-component {
+  width: 375px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-component__image {
+  width: 100%;
+  z-index: -100;
+}
+
+.card-component__image-container {
+  position: relative;
+}
+
+.card-component__image-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: auto;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(120deg, #eaee44, #33d0ff);
+  z-index: 100;
+}
+
+.card-component__header {
+  text-align: center;
 }
 
 .attribution {
