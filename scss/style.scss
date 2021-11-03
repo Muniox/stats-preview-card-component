@@ -4,6 +4,15 @@ $very-dark-blue: hsl(233, 47%, 7%);
 $dark-desaturated-blue: hsl(244, 38%, 16%);
 $soft-violet: hsl(277, 64%, 61%);
 /******************/
+$white: hsl(0, 0%, 100%);
+$slightly-transparent-white-primary: hsla(
+  0,
+  0%,
+  100%,
+  0.75
+); /* main paragraph*/
+$slightly-transparent-white-secondary: hsla(0, 0%, 100%, 0.6); /* stats */
+/******************/
 
 * {
   box-sizing: border-box;
@@ -15,6 +24,7 @@ body {
   font-size: 15px;
   font-family: 'Inter', sans-serif;
   height: 100%;
+  background-color: $very-dark-blue;
 }
 
 .container {
@@ -29,6 +39,7 @@ body {
   width: 375px;
   border-radius: 10px;
   overflow: hidden;
+  background-color: $dark-desaturated-blue;
 
   &__image-container {
     position: relative;
@@ -39,13 +50,13 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0.7;
+    opacity: 0.6;
     height: auto;
     width: 100%;
     height: 100%;
-    background-color: $soft-violet;
+    background-color: hsl(277, 80%, 30%);
     z-index: 100;
-    mix-blend-mode: multiply;
+    mix-blend-mode: hard-light;
   }
 
   &__image {
@@ -57,12 +68,18 @@ body {
 
   &__header {
     text-align: center;
+    color: $white;
+  }
+
+  &__header-text-decoration {
+    color: $soft-violet;
   }
 }
 
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: $white;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
