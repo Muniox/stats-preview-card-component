@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 /* color variables*/
 /******************/
 /* main paragraph*/
 /* stats */
 /******************/
+=======
+>>>>>>> parent of 74459ef (Add style for image)
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -10,6 +13,7 @@
   padding: 0;
 }
 
+<<<<<<< HEAD
 body {
   font-size: 15px;
   font-family: 'Inter', sans-serif;
@@ -41,6 +45,11 @@ body {
   background-color: #1b1938;
 }
 
+.card-component__image {
+  width: 100%;
+  z-index: -100;
+}
+
 .card-component__image-container {
   position: relative;
 }
@@ -50,20 +59,11 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.6;
   height: auto;
   width: 100%;
   height: 100%;
-  background-color: #5b0f8a;
+  background-image: linear-gradient(120deg, #eaee44, #33d0ff);
   z-index: 100;
-  mix-blend-mode: hard-light;
-}
-
-.card-component__image {
-  display: block;
-  width: 100%;
-  z-index: -100;
-  height: auto;
 }
 
 .card-component__header {
@@ -75,6 +75,8 @@ body {
   color: #aa5cdb;
 }
 
+=======
+>>>>>>> parent of 74459ef (Add style for image)
 .attribution {
   font-size: 11px;
   text-align: center;
