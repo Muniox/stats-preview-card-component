@@ -1,13 +1,96 @@
+/****************************************/
+/*             colors variable          */
+/****************************************/
+//primary colors
+$main-background: hsl(233, 47%, 7%);
+$card-background: hsl(244, 38%, 16%);
+$accent: hsl(277, 64%, 61%);
+//neutral colors
+$main-hedding-stats: hsl(0, 0%, 100%);
+$main-paragraph: hsla(0, 0%, 100%, 0.75);
+$stats-headings: hsla(0, 0%, 100%, 0.6);
+/****************************************/
+//z-index
+$z-body: -10;
+$z-image: -5;
+$z-overlay: 10;
+
+/****************************************/
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+:root {
+  font-size: 62.5%;
+  color: $main-hedding-stats;
+  //for paragraph 15px
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  background-color: $main-background;
+  justify-content: center;
+  align-content: center;
+  font-family: 'Inter', sans-serif;
+  z-index: $z-body;
+}
+
+.stats-card {
+  width: 375px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: $card-background;
+
+  &__img-container {
+    position: relative;
+  }
+
+  // &__img-container::before {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   height: 100%;
+  //   width: 100%;
+  //   background-color: hsla(277, 80%, 50%, 0.7);
+  //   // background-blend-mode: color-burn;
+  //   z-index: $z-overlay;
+  //   border: 1px solid red;
+  // }
+
+  &__image-mobile {
+    display: block;
+    width: 100%;
+    background-color: hsla(277, 80%, 50%, 0.7);
+    background-blend-mode: overlay;
+    z-index: $z-image;
+  }
+
+  &__image-desktop {
+    display: none;
+  }
+
+  // &__info
+
+  // __stats
+
+  // __stats-item
+
+  // __item-title
+
+  &__item-info {
+    font-family: 'Lexend Deca', sans-serif;
+  }
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
-  color: $white;
+  color: $main-hedding-stats;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);

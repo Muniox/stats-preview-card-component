@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-/* color variables*/
-/******************/
-/* main paragraph*/
-/* stats */
-/******************/
-=======
->>>>>>> parent of 74459ef (Add style for image)
+/****************************************/
+/*             colors variable          */
+/****************************************/
+/****************************************/
+/****************************************/
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -13,70 +10,52 @@
   padding: 0;
 }
 
-<<<<<<< HEAD
-body {
-  font-size: 15px;
-  font-family: 'Inter', sans-serif;
-  height: 100%;
-  background-color: #090b1a;
+:root {
+  font-size: 62.5%;
+  color: white;
 }
 
-.container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+body {
+  display: -ms-grid;
+  display: grid;
+  min-height: 100vh;
+  background-color: #090b1a;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100vh;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  font-family: 'Inter', sans-serif;
+  z-index: -10;
 }
 
-.card-component {
+.stats-card {
   width: 375px;
-  border-radius: 10px;
+  border-radius: 5px;
   overflow: hidden;
   background-color: #1b1938;
 }
 
-.card-component__image {
-  width: 100%;
-  z-index: -100;
-}
-
-.card-component__image-container {
+.stats-card__img-container {
   position: relative;
 }
 
-.card-component__image-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: auto;
+.stats-card__image-mobile {
+  display: block;
   width: 100%;
-  height: 100%;
-  background-image: linear-gradient(120deg, #eaee44, #33d0ff);
-  z-index: 100;
+  background-color: rgba(151, 26, 230, 0.7);
+  background-blend-mode: overlay;
+  z-index: -5;
 }
 
-.card-component__header {
-  text-align: center;
-  color: white;
+.stats-card__image-desktop {
+  display: none;
 }
 
-.card-component__header-text-decoration {
-  color: #aa5cdb;
+.stats-card__item-info {
+  font-family: 'Lexend Deca', sans-serif;
 }
 
-=======
->>>>>>> parent of 74459ef (Add style for image)
 .attribution {
   font-size: 11px;
   text-align: center;
