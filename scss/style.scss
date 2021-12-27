@@ -37,11 +37,14 @@ body {
   align-content: center;
   font-family: 'Inter', sans-serif;
   z-index: $z-body;
+  gap: 20px;
 }
 
 .stats-card {
-  width: 375px;
-  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 32.7rem;
+  border-radius: 0.5rem;
   overflow: hidden;
   background-color: $card-background;
 
@@ -49,41 +52,71 @@ body {
     position: relative;
   }
 
-  // &__img-container::before {
-  //   content: '';
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   height: 100%;
-  //   width: 100%;
-  //   background-color: hsla(277, 80%, 50%, 0.7);
-  //   // background-blend-mode: color-burn;
-  //   z-index: $z-overlay;
-  //   border: 1px solid red;
-  // }
+  &__img-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: hsla(277, 80%, 50%, 0.6);
+    // background-blend-mode: overlay;
+  }
+
 
   &__image-mobile {
     display: block;
     width: 100%;
-    background-color: hsla(277, 80%, 50%, 0.7);
-    background-blend-mode: overlay;
-    z-index: $z-image;
   }
 
   &__image-desktop {
     display: none;
   }
 
-  // &__info
+  &__info {
+    padding: 25px;
+  }
 
-  // __stats
+  &__title {
+    text-align: center;
+    font-size: 29px;
+    margin-bottom: 25px;
+    font-weight: 700;
 
-  // __stats-item
+    &--accent {
+      color: $accent;
+    }
+  }
 
-  // __item-title
+  &__description {
+    text-align: center;
+    line-height: 20px;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 25px auto;
+    color: $main-paragraph;
+    width: 255px;
+  }
+
+  &__stats {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-top: 40px;
+    gap: 30px;
+  }
+
+  // &__stats-item
+
+  &__item-title {
+    font-size: 20px;
+  }
 
   &__item-info {
+    color: $stats-headings;
     font-family: 'Lexend Deca', sans-serif;
+    text-transform: uppercase;
   }
 }
 
@@ -94,4 +127,11 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 500px) {
+  .stats-card {
+    flex-direction: row;
+    width: unset;
+  }
 }

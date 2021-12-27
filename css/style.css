@@ -27,11 +27,19 @@ body {
       align-content: center;
   font-family: 'Inter', sans-serif;
   z-index: -10;
+  gap: 20px;
 }
 
 .stats-card {
-  width: 375px;
-  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 32.7rem;
+  border-radius: 0.5rem;
   overflow: hidden;
   background-color: #1b1938;
 }
@@ -40,20 +48,74 @@ body {
   position: relative;
 }
 
+.stats-card__img-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(151, 26, 230, 0.6);
+}
+
 .stats-card__image-mobile {
   display: block;
   width: 100%;
-  background-color: rgba(151, 26, 230, 0.7);
-  background-blend-mode: overlay;
-  z-index: -5;
 }
 
 .stats-card__image-desktop {
   display: none;
 }
 
+.stats-card__info {
+  padding: 25px;
+}
+
+.stats-card__title {
+  text-align: center;
+  font-size: 29px;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.stats-card__title--accent {
+  color: #aa5cdb;
+}
+
+.stats-card__description {
+  text-align: center;
+  line-height: 20px;
+  font-size: 15px;
+  font-weight: 400;
+  margin: 25px auto;
+  color: rgba(255, 255, 255, 0.75);
+  width: 255px;
+}
+
+.stats-card__stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 40px;
+  gap: 30px;
+}
+
+.stats-card__item-title {
+  font-size: 20px;
+}
+
 .stats-card__item-info {
+  color: rgba(255, 255, 255, 0.6);
   font-family: 'Lexend Deca', sans-serif;
+  text-transform: uppercase;
 }
 
 .attribution {
@@ -64,5 +126,15 @@ body {
 
 .attribution a {
   color: #3e52a3;
+}
+
+@media only screen and (min-width: 500px) {
+  .stats-card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: unset;
+  }
 }
 /*# sourceMappingURL=style.css.map */
