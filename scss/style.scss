@@ -133,5 +133,38 @@ body {
   .stats-card {
     flex-direction: row;
     width: unset;
+
+    &__img-container {
+      order: 2;
+    }
+
+    &__image-mobile {
+      display: none;
+    }
+
+    &__image-desktop {
+      display: block;
+    }
+
+    &__info {
+      order: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__title {
+      text-align: left;
+    }
+
+    &__description {
+      text-align: left;
+    }
+
+    &__stats {
+      flex-direction: row;
+      text-align: left;
+      justify-content: space-between;
+    }
   }
 }
