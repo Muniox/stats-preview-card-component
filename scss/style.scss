@@ -139,6 +139,7 @@ body {
 
     &__img-container {
       order: 2;
+      flex-shrink: 0.5;
     }
 
     &__image-mobile {

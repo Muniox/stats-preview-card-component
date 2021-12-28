@@ -143,6 +143,8 @@ body {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+    -ms-flex-negative: 0.5;
+        flex-shrink: 0.5;
   }
   .stats-card__image-mobile {
     display: none;
