@@ -38,7 +38,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 32.7rem;
+  max-width: 32.7rem;
   border-radius: 0.5rem;
   overflow: hidden;
   background-color: #1b1938;
@@ -89,7 +89,7 @@ body {
   font-weight: 400;
   margin: 25px auto;
   color: rgba(255, 255, 255, 0.75);
-  width: 255px;
+  max-width: 255px;
 }
 
 .stats-card__stats {
@@ -135,6 +135,9 @@ body {
         -ms-flex-direction: row;
             flex-direction: row;
     width: unset;
+    max-width: 1000px;
+    min-height: 400px;
+    margin: 0 25px;
   }
   .stats-card__img-container {
     -webkit-box-ordinal-group: 3;
@@ -146,6 +149,9 @@ body {
   }
   .stats-card__image-desktop {
     display: block;
+    width: 100%;
+    max-width: 488px;
+    height: 100%;
   }
   .stats-card__info {
     -webkit-box-ordinal-group: 2;
@@ -161,12 +167,18 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    max-width: 515px;
+    padding: 7% 7% 5% 7%;
   }
   .stats-card__title {
     text-align: left;
+    font-size: 32px;
   }
   .stats-card__description {
     text-align: left;
+    margin: unset;
+    max-width: 300px;
+    font-size: 13px;
   }
   .stats-card__stats {
     -webkit-box-orient: horizontal;
@@ -177,6 +189,14 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    max-width: 300px;
+    margin-top: 70px;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .stats-card {
+    margin: 0px;
   }
 }
 /*# sourceMappingURL=style.css.map */

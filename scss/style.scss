@@ -43,7 +43,7 @@ body {
 .stats-card {
   display: flex;
   flex-direction: column;
-  width: 32.7rem;
+  max-width: 32.7rem;
   border-radius: 0.5rem;
   overflow: hidden;
   background-color: $card-background;
@@ -95,7 +95,7 @@ body {
     font-weight: 400;
     margin: 25px auto;
     color: $main-paragraph;
-    width: 255px;
+    max-width: 255px;
   }
 
   &__stats {
@@ -133,6 +133,9 @@ body {
   .stats-card {
     flex-direction: row;
     width: unset;
+    max-width: 1000px;
+    min-height: 400px;
+    margin: 0 25px;
 
     &__img-container {
       order: 2;
@@ -144,6 +147,9 @@ body {
 
     &__image-desktop {
       display: block;
+      width: 100%;
+      max-width: 488px;
+      height: 100%;
     }
 
     &__info {
@@ -151,20 +157,34 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      max-width: 515px;
+      padding: 7% 7% 5% 7%;
     }
 
     &__title {
       text-align: left;
+      font-size: 32px;
     }
 
     &__description {
       text-align: left;
+      margin: unset;
+      max-width: 300px;
+      font-size: 13px;
     }
 
     &__stats {
       flex-direction: row;
       text-align: left;
       justify-content: space-between;
+      max-width: 300px;
+      margin-top: 70px;
     }
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .stats-card {
+    margin: 0px;
   }
 }
