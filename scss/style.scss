@@ -37,7 +37,7 @@ body {
   align-content: center;
   font-family: 'Inter', sans-serif;
   z-index: $z-body;
-  gap: 20px;
+  gap: 2rem;
 }
 
 .stats-card {
@@ -74,13 +74,13 @@ body {
   }
 
   &__info {
-    padding: 25px;
+    padding: 2.5rem;
   }
 
   &__title {
     text-align: center;
-    font-size: 29px;
-    margin-bottom: 25px;
+    font-size: 2.9rem;
+    margin-bottom: 2.5rem;
     font-weight: 700;
 
     &--accent {
@@ -90,12 +90,12 @@ body {
 
   &__description {
     text-align: center;
-    line-height: 20px;
-    font-size: 15px;
+    line-height: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 400;
-    margin: 25px auto;
+    margin: 2.5rem auto;
     color: $main-paragraph;
-    max-width: 255px;
+    max-width: 25.5rem;
   }
 
   &__stats {
@@ -103,8 +103,8 @@ body {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    margin-top: 40px;
-    gap: 30px;
+    margin-top: 4rem;
+    gap: 3rem;
   }
 
   // &__stats-item
@@ -121,7 +121,7 @@ body {
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 1.1rem;
   text-align: center;
   color: $main-hedding-stats;
 }
@@ -129,13 +129,13 @@ body {
   color: hsl(228, 45%, 44%);
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 50rem) {
   .stats-card {
     flex-direction: row;
     width: unset;
-    max-width: 1000px;
-    min-height: 400px;
-    margin: 0 25px;
+    max-width: 100rem;
+    min-height: 40rem;
+    margin: 0 2.5rem;
 
     &__img-container {
       order: 2;
@@ -149,7 +149,7 @@ body {
     &__image-desktop {
       display: block;
       width: 100%;
-      max-width: 488px;
+      max-width: 48.8rem;
       height: 100%;
     }
 
@@ -158,34 +158,34 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      max-width: 515px;
+      max-width: 51.5rem;
       padding: 7% 7% 5% 7%;
     }
 
     &__title {
       text-align: left;
-      font-size: 32px;
+      font-size: 3.2rem;
     }
 
     &__description {
       text-align: left;
       margin: unset;
-      max-width: 300px;
-      font-size: 13px;
+      max-width: 30rem;
+      font-size: 1.3rem;
     }
 
     &__stats {
       flex-direction: row;
       text-align: left;
       justify-content: space-between;
-      max-width: 300px;
-      margin-top: 70px;
+      max-width: 30rem;
+      margin-top: 7rem;
     }
   }
 }
 
-@media only screen and (min-width: 1050px) {
+@media only screen and (min-width: 105rem) {
   .stats-card {
-    margin: 0px;
+    margin: 0rem;
   }
 }
